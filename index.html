@@ -3,6 +3,12 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+        <script>
+            window.openNewTab = function () {
+                var myNewWindowInstanceInANewProcess = window.open("", "_blank");
+                myNewWindowInstanceInANewProcess.location.href = "webapp/index.html";
+            }
+        </script>
     </head>
 
     <body>
@@ -20,5 +26,6 @@
             <a target="_blank" href="/pages/d072634/ie-test/withIframe.html">with iframe</a>
         </div>
         <button onclick="window.open('webapp/index.html', '_blank')">window.open</button>
+        <button onclick="window.openNewTab()">window.open with replace location</button>
     </body>
 </html>
